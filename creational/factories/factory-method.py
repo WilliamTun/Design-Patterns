@@ -1,0 +1,40 @@
+'''
+
+Factory methods is a static method that is capable of creating objects.
+This outsources creation of an object to that given method.
+
+
+'''
+from math import *
+from enum import Enum
+
+class CoordinateSystem(Enum):
+    CARTESIAN = 1
+    POLAR = 2
+
+class Point:
+    def __init__(self, x=0, y=0):
+        self.x = x
+        self.y = y
+
+    def __str__(self):
+        return f'x: {self.x}, y: {self.y}'
+
+    class PointFactory:
+        #@staticmethod
+        def new_cartesian_point(self, x, y):
+            p = Point()
+            p.x = x
+            p.y = y
+            return p
+
+        #@staticmethod
+        def new_polar_point(self, rho, theta):
+            return Point(rho * cos(theta), rho * sin(theta))
+
+    factory = PointFactory()
+
+if __name__ == '__main__':
+    p = Point(2,3)
+    p2 = Point.factory.new_polar_point(1, 2)
+    print(p, p2)
