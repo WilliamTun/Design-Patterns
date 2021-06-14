@@ -40,5 +40,42 @@ Giving individual components within an aggregation of components, identical inte
 ### Decorator
 Attach additional responsibility to objects without directly modifying objects. 
 
+### Facade
+Attempt to hide low level code, but still give user-friendly options to access low level features. Can be combined with permissions for power-users.
+
+### Flyweight
+Save large numbers of similar objects without storing them in memory to make memory utilisation more efficient.
+
+### Proxy 
+A surrogate object that forwards calls to real object, whilst performing additional functions. Various types of proxy exist such as for access control, communication and logging. 
+
 
 ## Behaviour 
+### Chain of Responsibility
+Allows processing information/events in a chain. 
+
+### Command
+Encapsulates a request into a separate object. Each request is packaged, sent to a central authority and the request gets processed. Good for adding funcationality to do with Audits, replays, undo/redo. Suitable for a set of sequenced events. Abides by good practise of SEPARATION of commands & queries. Good for database processing systems and favours EVENTUAL consistency over immediate consistency. 
+
+### Memento
+Tokens to allow access to various system states back and forward through time. Also good for replays & undo/redo. 
+
+### Interpretor
+Transforms text input into Object orientated structures. 
+
+### Iterator
+Provides interface for accessing elements of an aggregate object. 
+
+### Mediator
+Provide messaging between two objects eg. Message passing & chatroom
+
+### Observer
+Allows notifications of changes in a component
+
+### State Machines 
+Model systems by having one of possible states and transition between states. 
+
+
+
+
+
